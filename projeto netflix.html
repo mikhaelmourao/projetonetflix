@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <title>projeto netflix</title>
+</head>
+<body>
+   <header id="navigation">
+<div class="categories-logo-container">
+      <img src="./assets/netflix_full_logo.png" alt="Netflix logo"/>
+      <div class="categories">
+        <a href="#">Início</a>
+        <a href="#">Séries</a>
+        <a href="#">Filmes</a>
+        <a href="#">Bombando</a>
+        <a href="#">Minha lista</a>
+        <a href="#">Navegar por idiomas</a>
+      </div>
+    </div>
+
+
+
+<div class="search-login-container">
+      <div class="search-container">
+        <img src="./assets/magnifying-glass.svg" alt="search" onclick="showSearch()">
+        <input type="search" id="search" placeholder="Título, gente e gênero" />
+      </div>
+
+
+
+<div class="profile-container">
+        <div class="login">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/0/0b/Netflix-avatar.png" alt="profile logo" />
+          <img src="./assets/caret-right-fill.svg" alt="profile options" id="profile_caret" />
+        </div>
+        <div class="profile-content">
+          <div class="profiles">
+            <div>
+              <img src="http://occ-0-6645-3851.1.nflxso.net/dnm/api/v6/K6hjPJd6cR6FpVELC5Pd6ovHRSk/AAAABceskA5x4J8tPPGrpbl0pasEOd1RwF7PDjvIOR8P4dwIayVvD10tmC-G5nXC23smU6-H4onhbt8prP1twBC6dQuN-p4DcNg.png?r=02d" alt="" />
+              <span>Lyanna</span>
+            </div>
+            <div>
+              <img src="https://mlpnk72yciwc.i.optimole.com/cqhiHLc.IIZS~2ef73/w:auto/h:auto/q:75/https://bleedingcool.com/wp-content/uploads/2022/06/12_Jinx.jpg" alt="" />
+              <span>Fernanda</span>
+            </div>
+            <div>
+              <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRslupd2n8u15Kz_rI93YoZZN0_Dhr1hnTuVqR4S9kfTrPq3rgp_-PUv4ncYLD6ClkqdDc&usqp=CAU" alt="" />
+              <span>Matheus</span>
+            </div>
+            <div>
+              <img src="./assets/pencil-simple-line.svg" alt="" />
+              <span>Gerenciar perfis</span>
+            </div>
+            <div>
+              <img src="./assets/user.svg" alt="" />
+              <span>Conta</span>
+            </div>
+            <div>
+              <img src="./assets/question.svg" alt="" />
+              <span>Central de ajuda</span>
+            </div>
+          </div>
+          <a href="#">Sair da Netflix</a>
+        </div>
+      </div>
+    </div>
+</header>
+
+<main>
+
+<section id="home"></section>
+    <section class="movies-tv-carousels">
+      <h2>Populares</h2>
+      <div class="carousel_container">
+        <button onclick="goLeft('popular')"> 
+          <img src="./assets/caret-left-bold.svg" /> 
+        </button>
+        <div class="popular carousel"></div>
+        <button onclick="goRight('popular')">
+          <img src="./assets/caret-left-bold.svg" /> 
+        </button>
+      </div>
+    </section>
+    <section class="movies-tv-carousels">
+      <h2>Bem avaliados</h2>
+      <div class="carousel_container" >
+        <button onclick="goLeft('top_rated')"> 
+          <img src="./assets/caret-left-bold.svg" /> 
+        </button>
+        <div class="top_rated carousel"></div>
+        <button onclick="goRight('top_rated')">
+          <img src="./assets/caret-left-bold.svg" /> 
+        </button>
+      </div>
+    </section>
+    <section class="movies-tv-carousels">
+      <h2>Lançamentos</h2>
+      <div class="carousel_container" >
+        <button onclick="goLeft('upcoming')"> 
+          <img src="./assets/caret-left-bold.svg" /> 
+        </button>
+        <div class="upcoming carousel"></div>
+        <button onclick="goRight('upcoming')">
+          <img src="./assets/caret-left-bold.svg" /> 
+        </button>
+      </div>
+    </section>
+    <section class="movies-tv-carousels">
+      <h2>Series Recomendadas</h2>
+      <div class="carousel_container" >
+        <button onclick="goLeft('popular_tv')"> 
+          <img src="./assets/caret-left-bold.svg" /> 
+        </button>
+        <div class="popular_tv carousel"></div>
+        <button onclick="goRight('popular_tv')">
+          <img src="./assets/caret-left-bold.svg" /> 
+        </button>
+      </div>
+    </section>
+    <section class="movies-tv-carousels">
+      <h2>Series Bem Avaliadas</h2>
+      <div class="carousel_container" >
+        <button onclick="goLeft('top_rated_tv')"> 
+          <img src="./assets/caret-left-bold.svg" /> 
+        </button>
+        <div class="top_rated_tv carousel"></div>
+        <button onclick="goRight('top_rated_tv')">
+          <img src="./assets/caret-left-bold.svg" /> 
+        </button>
+      </div>
+    </section>
+    </main>
+    <footer>
+        <div class="social">
+            <a href="#">
+              <img src="./assets/social/instagram-logo.svg" alt="instagram logo" />
+            </a>
+            <a href="#">
+              <img src="./assets/social/twitter-logo-fill.svg" alt="twitter logo" />
+            </a>
+            <a href="#">
+              <img src="./assets/social/youtube-logo-fill.svg" alt="youtube logo" />
+            </a>
+          </div>
+          <section>
+            <div>
+              <a href="">Autodescrição</a>
+              <a href="">Relações com investidores</a>
+              <a href="">Avisos legais</a>
+            </div>
+            <div>
+              <a href="">Central de Ajuda</a>
+              <a href="">Carreiras</a>
+              <a href="">Preferências de cookies</a>
+            </div>
+            <div>
+              <a href="">Cartão pré-pago</a>
+              <a href="">Termos de uso</a>
+              <a href="">Informações corporativas</a>
+            </div>
+            <div>
+              <a href="">Imprensa</a>
+              <a href="">Privacidade</a>
+              <a href="">Entre em contato</a>
+            </div>
+          </section>
+          <p> &copy; 1997-2023 Netflix, Inc.</p>
+
+
+
+
+
+    </footer>
+    <script src="Js\principal.js"></script>
+    <script src="Js/dadosApi.js"></script>
+</body>
+</html>
